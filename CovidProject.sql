@@ -9,7 +9,7 @@ ORDER BY 1,2
 
 
 ---------------------------------------------------------------------------------------------------------------------------
--- [1] Total cases VS Total Deaths (percentage of people that died from COVID-19 after being contaminated)
+-- [1] Total cases VS Total Deaths 
 ---------------------------------------------------------------------------------------------------------------------------
 
 -- Shows the likelihood of dying if you contract covid in your country (in this case, Belgium)
@@ -56,7 +56,8 @@ ORDER BY TotalDeathCount DESC
 ---------------------------------------------------------------------------------------------------------------------------
 -- [3] Global Numbers: percentage of death from COVID.
 ---------------------------------------------------------------------------------------------------------------------------
--- -- Total amount of people in the world that have died from COVID.
+
+-- Total amount of people in the world that have died from COVID.
 SELECT SUM(new_cases) AS total_cases, SUM(CAST(new_deaths AS int)) AS total_deaths, SUM(CAST(new_deaths AS int))/SUM(new_cases)*100 AS DeathPercentage
 FROM PortfolioProject..CovidDeaths
 -- WHERE location like '%Belgium%'
